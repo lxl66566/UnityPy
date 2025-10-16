@@ -244,8 +244,8 @@ TextAssets are usually normal text files.
 -   `.m_Name`
 -   `.m_Script` - str
 
-Some games save binary data as TextAssets. As ``m_Script`` gets handled as str by default,
-use ``m_Script.encode("utf-8", "surrogateescape")`` to retrieve the original binary data.
+Some games save binary data as TextAssets. As `m_Script` gets handled as str by default,
+use `m_Script.encode("utf-8", "surrogateescape")` to retrieve the original binary data.
 
 **Export**
 
@@ -301,8 +301,8 @@ for obj in env.objects:
 
 **TypeTreeGenerator**
 
-UnityPy can generate the typetrees of MonoBehaviours from the game assemblies using an optional package, ``TypeTreeGeneratorAPI``, which has to be installed via pip.
-UnityPy will automatically try to generate the typetree of MonoBehaviours if the typetree is missing in the assets and ``env.typetree_generator`` is set.
+UnityPy can generate the typetrees of MonoBehaviours from the game assemblies using an optional package, `TypeTreeGeneratorAPI`, which has to be installed via pip.
+UnityPy will automatically try to generate the typetree of MonoBehaviours if the typetree is missing in the assets and `env.typetree_generator` is set.
 
 ```python
 import UnityPy
@@ -331,7 +331,6 @@ for obj in objects:
         x = obj.read()
 ```
 
-
 ### AudioClip
 
 -   `.samples` - `{sample-name : sample-data}`
@@ -344,6 +343,10 @@ clip: AudioClip
 for name, data in clip.samples.items():
     with open(name, "wb") as f:
         f.write(data)
+
+with open(new_audio, "rb") as f:
+    clip.samples["new_name.wav"] = f.read()
+    clip.save()
 ```
 
 ### Font
