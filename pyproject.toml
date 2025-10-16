@@ -44,7 +44,7 @@ dependencies = [
     "Pillow",
     "texture2ddecoder >= 1.0.5", # texture decompression
     "etcpak",                    # ETC & DXT compression
-    "astc-encoder-py >= 0.1.12",  # ASTC compression
+    "astc-encoder-py >= 0.1.12", # ASTC compression
     # audio extraction
     "fmod_toolkit",
     # filesystem handling
@@ -59,7 +59,7 @@ UnityPy = "UnityPy.cli:main"
 
 [project.optional-dependencies]
 # optional dependencies must be lowercase/normalized
-ttgen = ["typetreegeneratorapi>=0.0.7"]
+ttgen = ["typetreegeneratorapi>=0.0.6"]
 full = ["unitypy[ttgen]"]
 tests = ["pytest", "pillow", "psutil", "unitypy[full]"]
 dev = ["ruff", "unitypy[tests]"]
